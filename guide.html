@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to automatically group tabs in Chrome (3 ways, 2026)</title>
+    <meta
+      name="description"
+      content="Three ways to group tabs in Google Chrome: by hand, with Chrome's built-in Tab organizer, and automatically with rules as you browse. Step by step, with what each one can and can't do."
+    />
+    <link rel="canonical" href="https://lymnal.github.io/grouprules-site/guide.html" />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="GroupRules" />
+    <meta property="og:url" content="https://lymnal.github.io/grouprules-site/guide.html" />
+    <meta property="og:title" content="How to automatically group tabs in Chrome (3 ways)" />
+    <meta property="og:description" content="By hand, with Chrome's Tab organizer, or automatically with rules. What each one can and can't do." />
+    <meta property="og:image" content="https://lymnal.github.io/grouprules-site/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to automatically group tabs in Chrome (3 ways)",
+        "description": "By hand, with Chrome's built-in Tab organizer, and automatically with rules as you browse.",
+        "author": { "@type": "Person", "name": "Ethan Sam" },
+        "datePublished": "2026-09-30",
+        "dateModified": "2026-09-30",
+        "image": "https://lymnal.github.io/grouprules-site/og.png",
+        "mainEntityOfPage": "https://lymnal.github.io/grouprules-site/guide.html"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="wrap narrow legal">
+      <nav aria-label="Main">
+        <a class="brand" href="./"><img src="img/favicon-32.png" width="30" height="30" alt="" />GroupRules</a>
+      </nav>
+      <main id="main">
+        <h1>How to automatically group tabs in Chrome</h1>
+        <p class="muted">Updated September 30, 2026 · 4-minute read</p>
+        <p>
+          Chrome's tab groups turn a wall of tabs into a few labelled, coloured bundles you can collapse. The catch is
+          getting tabs into them. There are three ways, from fully manual to fully automatic.
+        </p>
+        <div class="toc">
+          <strong>On this page</strong>
+          <ol>
+            <li><a href="#manual">Group tabs by hand</a></li>
+            <li><a href="#organizer">Let Chrome suggest groups (Tab organizer)</a></li>
+            <li><a href="#rules">Group tabs automatically with rules</a></li>
+            <li><a href="#compare">Which one should you use?</a></li>
+            <li><a href="#tips">Tips that make tab groups better</a></li>
+          </ol>
+        </div>
+
+        <h2 id="manual">1. Group tabs by hand</h2>
+        <ol>
+          <li>Right-click a tab and choose <strong>Add tab to new group</strong>.</li>
+          <li>Type a name, pick a colour, and press Enter.</li>
+          <li>
+            To add more tabs, drag them into the group. Or select several at once: hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd>
+            on Mac) and click each tab, then right-click and choose <strong>Add tabs to new group</strong>.
+          </li>
+        </ol>
+        <p><strong>Good for:</strong> a handful of tabs. <strong>Not good for:</strong> keeping up as you browse. Every new tab has to be filed by hand, again.</p>
+
+        <h2 id="organizer">2. Let Chrome suggest groups (Tab organizer)</h2>
+        <p>
+          Chrome has a built-in AI feature called Tab organizer. Right-click a tab and choose
+          <strong>Organize similar tabs</strong>, and Chrome suggests groups with names, which you can accept or adjust.
+        </p>
+        <ul>
+          <li>It's a <strong>one-off tidy</strong>: it suggests groups when you ask it to, and doesn't keep sorting new tabs as you open them.</li>
+          <li>It groups by <strong>topic</strong>, as the AI understands it, so the same site can land in different groups on different days.</li>
+          <li>It needs you <strong>signed in to Chrome</strong>, and it isn't available in every country or on every work or school account.</li>
+        </ul>
+        <p>
+          <strong>Good for:</strong> a quick clean-up of a messy window. Google's own instructions are in
+          <a href="https://support.google.com/chrome/answer/14519765" rel="noopener">Chrome Help</a>.
+        </p>
+
+        <h2 id="rules">3. Group tabs automatically with rules</h2>
+        <p>
+          If the same sites should always end up together (GitHub with Stack Overflow, Gmail with Calendar), a rule does it
+          every time, with no clicking. That's what GroupRules does. (Yes, this guide is on GroupRules' own site. The other
+          two methods above are genuinely useful too.)
+        </p>
+        <ol>
+          <li><a href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=guide">Add GroupRules to Chrome</a>. It's free, with no account.</li>
+          <li>On the page that opens, switch on a starter pack (Code, Docs, Mail, AI, Watch…) or type your own: <code>github.com, gitlab.com → Code</code>.</li>
+          <li>Press <kbd>Alt+Shift+G</kbd> to sort the window you have open now.</li>
+          <li>Leave auto mode on. From now on, new tabs join their group as they open, and <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>T</kbd> inside a group keeps the new tab in it.</li>
+        </ol>
+        <p>
+          It never closes a tab, never touches pinned tabs or groups you made yourself, and one click undoes the last move.
+          <a href="./#try">Try it in your browser first</a>: the demo on the home page runs the real engine.
+        </p>
+
+        <h2 id="compare">Which one should you use?</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th><span class="sr-only">Feature</span></th><th>By hand</th><th>Tab organizer</th><th>Rules (GroupRules)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Keeps sorting new tabs as you browse</td><td>No</td><td>No</td><td class="yes">Yes (Pro)</td></tr>
+              <tr><td>Same site → same group, every time</td><td>If you're careful</td><td>Not guaranteed</td><td class="yes">Yes</td></tr>
+              <tr><td>Works without signing in to Chrome</td><td class="yes">Yes</td><td>No</td><td class="yes">Yes</td></tr>
+              <tr><td>Tab data stays on your computer</td><td class="yes">Yes</td><td>Check Google's help page</td><td class="yes">Yes</td></tr>
+              <tr><td>Cost</td><td>Free</td><td>Free</td><td>Free with 3 rules and one-click grouping; auto mode is $5 once</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Many people use all three: rules for the sites they visit every day, Tab organizer for the occasional research
+          rabbit-hole, and a hand-made group for a one-off project. GroupRules leaves groups you make yourself alone, so they
+          don't fight.
+        </p>
+
+        <h2 id="tips">Tips that make tab groups better</h2>
+        <ul>
+          <li><strong>Collapse a group</strong> by clicking its name. The tabs stay open, just out of the way.</li>
+          <li>
+            <strong>Keep a group for later.</strong> Recent versions of Chrome save your groups, and they appear under the
+            Tab groups button on the bookmarks bar or in the ⋮ menu. To see them on your other computers, turn on
+            <em>Saved tab groups</em> in Chrome's sync settings.
+          </li>
+          <li><strong>Name groups with a word you'd search for.</strong> Chrome's tab search (<kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>) finds tabs faster when groups have clear names.</li>
+          <li><strong>Pin what you always keep open</strong>, like your inbox or music. Pinned tabs sit outside groups, and GroupRules never touches them.</li>
+        </ul>
+
+        <div class="box" style="margin-top: 34px">
+          <strong>Try the rules approach free.</strong> Every install starts with a 7-day trial of everything, with no signup
+          and no card. <a href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=guide_end">Add GroupRules to Chrome</a>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="wrap narrow">
+        <div class="cols">
+          <a href="./">GroupRules home</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms of sale</a>
+          <a href="mailto:ethanesame+grouprules@gmail.com">Contact</a>
+        </div>
+        <div>
+          Chrome is a trademark of Google LLC. GroupRules is an independent product, not made or endorsed by Google. This
+          site has no cookies, analytics or third-party scripts.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

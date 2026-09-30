@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>GroupRules removed</title>
-    <link rel="icon" href="icon-128.png" />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="stylesheet" href="site.css" />
     <style>
       .reasons a {
@@ -25,9 +26,35 @@
   </head>
   <body>
     <div class="wrap narrow legal">
-      <nav><a class="brand" href="./"><img src="icon-128.png" alt="" />GroupRules</a></nav>
+      <nav aria-label="Main"><a class="brand" href="./"><img src="img/favicon-32.png" width="30" height="30" alt="" />GroupRules</a></nav>
+      <main id="main">
       <h1>GroupRules is removed.</h1>
       <p>Your tabs and tab groups are exactly as they were — uninstalling doesn't close or change anything.</p>
+
+      <h2>If it was one of these, there may be a quick fix</h2>
+      <details>
+        <summary>It grouped tabs the wrong way</summary>
+        <p>
+          Open the rule and switch off <em>Include subdomains</em>, or use <em>Address starts with…</em> to match just
+          part of a site (like <code>github.com/your-team/</code>). The address tester on the rules page shows where any
+          address would go before it happens. Rules are checked top to bottom, so drag the more specific one higher.
+        </p>
+      </details>
+      <details>
+        <summary>Setting up rules was too fiddly</summary>
+        <p>
+          Starter packs are one click each (Code, Docs, Mail, AI, Watch…), and “From your open tabs” turns sites you already
+          have open into rules. Or email me what you wanted and I'll send you a rule to paste in.
+        </p>
+      </details>
+      <details>
+        <summary>I didn't want to pay after the trial</summary>
+        <p>
+          Free keeps working forever: 3 rules (each can cover many sites), the <kbd>Alt+Shift+G</kbd> shortcut to sort the
+          window, and Undo. Only auto mode and extra rules are Pro.
+        </p>
+      </details>
+      <p><a class="ghost" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=uninstall">Reinstall GroupRules</a></p>
 
       <h2>Would you tell me why? One click.</h2>
       <p class="muted">Each option opens a pre-written email. Nothing is recorded on this page.</p>
@@ -42,6 +69,7 @@
 
       <h2>Bought Pro recently?</h2>
       <p>Refunds are no-questions within 30 days: email <a href="mailto:ethanesame+grouprules@gmail.com?subject=GroupRules%20refund">ethanesame+grouprules@gmail.com</a>.</p>
+    </main>
     </div>
   </body>
 </html>

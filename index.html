@@ -3,29 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GroupRules — Auto group tabs by rules for Google Chrome™ · Never closes a tab</title>
+    <title>GroupRules: Auto-group tabs in Chrome by rules · Never closes a tab</title>
     <meta
       name="description"
-      content="Tab groups that sort themselves. Write a rule once (github.com → Code) and every matching tab lands in the right Chrome tab group. Never closes a tab. No account. $5 once, not a subscription."
+      content="Tab groups that sort themselves. Write a rule once (github.com → Code) and every matching tab joins the right Chrome tab group as you browse. Private, predictable, never closes a tab. Free, or $5 once."
     />
-    <link rel="icon" href="icon-128.png" />
     <link rel="canonical" href="https://lymnal.github.io/grouprules-site/" />
-    <meta property="og:title" content="GroupRules — tab groups that sort themselves" />
-    <meta property="og:description" content="Rules put every tab in the right Chrome tab group. Never closes a tab. $5 once." />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="img/icon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GroupRules" />
+    <meta property="og:url" content="https://lymnal.github.io/grouprules-site/" />
+    <meta property="og:title" content="GroupRules: tab groups that sort themselves" />
+    <meta
+      property="og:description"
+      content="Rules put every tab in the right Chrome tab group as you browse. Private, predictable, never closes a tab. Free, or $5 once."
+    />
     <meta property="og:image" content="https://lymnal.github.io/grouprules-site/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="GroupRules: Chrome tabs sorted into coloured groups by rules" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GroupRules: tab groups that sort themselves" />
+    <meta name="twitter:description" content="Rules put every tab in the right Chrome tab group. Never closes a tab. $5 once." />
+    <meta name="twitter:image" content="https://lymnal.github.io/grouprules-site/og.png" />
     <link rel="stylesheet" href="site.css" />
+    <script src="demo.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "GroupRules",
+        "alternateName": "GroupRules: Auto Group Tabs by Rules",
+        "url": "https://lymnal.github.io/grouprules-site/",
+        "image": "https://lymnal.github.io/grouprules-site/og.png",
         "applicationCategory": "BrowserApplication",
-        "operatingSystem": "Google Chrome",
-        "description": "Automatically puts tabs into the right Chrome tab group using your rules. Never closes a tab.",
+        "applicationSubCategory": "Productivity",
+        "operatingSystem": "Windows, macOS, Linux, ChromeOS",
+        "browserRequirements": "Requires Google Chrome 116 or later",
+        "downloadUrl": "https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj",
+        "description": "Automatically puts tabs into the right Chrome tab group using rules you write. Private, predictable, and it never closes a tab.",
+        "featureList": [
+          "Auto-group tabs as you browse",
+          "Group the whole window in one click (Alt+Shift+G)",
+          "Undo the last 20 moves",
+          "Never closes, discards or reloads a tab",
+          "Never touches pinned tabs or groups you made",
+          "No account, no analytics"
+        ],
+        "author": { "@type": "Person", "name": "Ethan Sam" },
         "offers": [
-          { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Pro (one-time purchase)", "price": "5.00", "priceCurrency": "USD" }
+          { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "url": "https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj" },
+          { "@type": "Offer", "name": "Pro (one-time purchase)", "price": "5.00", "priceCurrency": "USD", "url": "https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj" }
         ]
       }
     </script>
@@ -34,274 +66,452 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do I automatically group tabs in Chrome?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Install GroupRules, add a rule such as github.com → Code, and every GitHub tab you open joins a Code tab group automatically. You can also press Alt+Shift+G to sort the whole window at once."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does GroupRules close or suspend tabs?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. GroupRules only groups and moves tabs. The build is checked automatically so it cannot call Chrome's close, discard or reload functions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is GroupRules a subscription?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Free forever with 3 rules. Pro is a one-time $5 purchase with a 30-day no-questions refund."
-            }
-          }
+          { "@type": "Question", "name": "How do I automatically group tabs in Chrome?", "acceptedAnswer": { "@type": "Answer", "text": "Install GroupRules and turn on a starter pack or write a rule such as github.com → Code. Every GitHub tab you open then joins a Code tab group automatically. Press Alt+Shift+G to sort the whole window at once." } },
+          { "@type": "Question", "name": "Why does Chrome say GroupRules can read my browsing history?", "acceptedAnswer": { "@type": "Answer", "text": "To put a tab in the right group, GroupRules has to see the tab's address, and Chrome words that permission as 'Read your browsing history'. Addresses are matched on your computer and never stored or sent anywhere. GroupRules has no analytics and no servers." } },
+          { "@type": "Question", "name": "Does GroupRules close, suspend or reload tabs?", "acceptedAnswer": { "@type": "Answer", "text": "No. It only groups and moves tabs. The build fails automatically if the code could close, discard or reload a tab." } },
+          { "@type": "Question", "name": "How is GroupRules different from Chrome's own Organize similar tabs?", "acceptedAnswer": { "@type": "Answer", "text": "Chrome's Tab organizer suggests groups when you ask it to. It is a one-off tidy that needs you signed in to Chrome and is not available in every country or on every account. GroupRules follows rules you choose, keeps sorting new tabs as you browse, gives the same result every time and needs no sign-in." } },
+          { "@type": "Question", "name": "Is GroupRules a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is free forever with 3 rules. Pro is a one-time $5 purchase with a 30-day no-questions refund, and every install starts with a 7-day Pro trial with no signup and no card." } },
+          { "@type": "Question", "name": "Does GroupRules work in Edge or Brave?", "acceptedAnswer": { "@type": "Answer", "text": "It is built and tested for Google Chrome. It only uses the standard tab-groups API that Edge and Brave also support, so it should work there too." } }
         ]
       }
     </script>
   </head>
   <body>
-    <div class="wrap">
-      <nav>
-        <a class="brand" href="./"><img src="icon-128.png" alt="" />GroupRules</a>
-        <div class="links">
-          <a href="#fixed">What's different</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-          <a href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj">Add to Chrome</a>
-        </div>
-      </nav>
-
-      <header>
-        <h1>Tab groups that<br />sort themselves.</h1>
-        <p class="lede">
-          Write a rule once — <code>github.com → Code</code> — and every matching tab lands in the right Chrome tab
-          group, as you browse. Predictable, local, and it never closes a tab.
-        </p>
-        <a class="cta" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj">Add to Chrome — it's free</a>
-        <div class="cta-note">7-day Pro trial starts on install. No signup, no card. Then free forever, or $5 once.</div>
-        <div class="promises">
-          <span>Never closes a tab</span><span>Never pulls tabs out of your own groups</span><span>No account</span
-          ><span>Your tabs never leave your browser</span><span>One-click undo</span>
-        </div>
-
-        <div class="demo" aria-label="Illustration: a messy tab strip before, tidy colour-coded groups after">
-          <div class="strip">
-            <p class="label">Before</p>
-            <div class="tabs">
-              <div class="tab">Pull request #42</div>
-              <div class="tab">Inbox (3)</div>
-              <div class="tab">Q3 plan — Docs</div>
-              <div class="tab">useEffect docs</div>
-              <div class="tab">Lo-fi beats</div>
-              <div class="tab">Issue #118</div>
-              <div class="tab">Budget sheet</div>
-              <div class="tab">Calendar</div>
-              <div class="tab">Stack Overflow</div>
-            </div>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="topbar" data-topbar>
+      <div class="wrap">
+        <nav aria-label="Main">
+          <a class="brand" href="./"><img src="img/favicon-32.png" width="30" height="30" alt="" />GroupRules</a>
+          <div class="links">
+            <a href="#try">Try it</a>
+            <a href="#why">Why rules</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a class="btn-sm" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=nav">Add to Chrome</a>
           </div>
-          <div class="strip">
-            <p class="label">After — automatically</p>
-            <div class="tabs">
-              <span class="chip c-blue">Code</span>
-              <div class="tab c-blue">Pull request #42</div>
-              <div class="tab c-blue">Issue #118</div>
-              <div class="tab c-blue">Stack Overflow</div>
-              <div class="tab c-blue">useEffect docs</div>
-              <span class="chip c-green">Docs</span>
-              <div class="tab c-green">Q3 plan — Docs</div>
-              <div class="tab c-green">Budget sheet</div>
-              <span class="chip c-orange">Mail</span>
-              <div class="tab c-orange">Inbox (3)</div>
-              <div class="tab c-orange">Calendar</div>
-              <span class="chip c-pink">Watch</span>
-              <div class="tab c-pink">Lo-fi beats</div>
-            </div>
-          </div>
-          <p class="caption">Illustration.</p>
-        </div>
-      </header>
+        </nav>
+      </div>
     </div>
 
-    <section id="fixed">
-      <div class="wrap">
-        <h2>Built from other auto-groupers' 1-star reviews.</h2>
+    <main id="main">
+      <header class="wrap">
+        <h1>Tab groups that<br />sort themselves.</h1>
         <p class="lede">
-          Before writing a line of code, we read the low-star reviews of existing tab-grouping extensions (paraphrased
-          below). Each complaint is now a behaviour GroupRules is tested against on every build.
+          Write a rule once, like <code>github.com → Code</code>, and every matching tab joins the right Chrome tab
+          group as you browse. Private, predictable, and it never closes a tab.
         </p>
-        <div class="grid">
-          <div class="card">
-            <p class="complaint">Common complaint: creates duplicate groups for the same site</p>
-            <h3>One rule, one group per window</h3>
-            <p>New tabs join the existing group — even a collapsed one. Never a second "Code".</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: ignores or unpins pinned tabs</p>
-            <h3>Pinned tabs are never touched</h3>
-            <p>Not moved, not grouped, not counted.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: renames and reorders groups without asking</p>
-            <h3>Your groups are yours</h3>
-            <p>A tab in a group you created is never moved out of it, and groups are only renamed when you rename the rule that owns them.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: the minimum-tabs setting is ignored</p>
-            <h3>Thresholds that actually work</h3>
-            <p>No group for a lone tab (default: start at 2, set per rule). And if you pull a tab out of a group, it stays out until you move to another site.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: a rule grabs subdomains it shouldn’t</p>
-            <h3>Exact or with subdomains — your call</h3>
-            <p>Per rule. And a tester shows which group any address would go to, before it happens.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: merges tabs from separate windows; breaks with web apps open</p>
-            <h3>Each window stays separate</h3>
-            <p>Tabs never jump between windows. Installed web apps and pop-ups are left alone.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: seconds of lag on every new tab with about a dozen rules</p>
-            <h3>Fast by design</h3>
-            <p>200 tabs are checked against 40 rules in under 50&nbsp;ms (a test on every build), and bursts are batched.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint: breaks after updates; opens a tab after every update</p>
-            <h3>Boring, stable technology</h3>
-            <p>Only Chrome's standard tab-groups API — no scripts injected into websites. Updates never open a tab.</p>
-          </div>
-          <div class="card">
-            <p class="complaint">Common complaint (tab managers): lost all my tabs</p>
-            <h3>Undo anything</h3>
-            <p>It can't close tabs at all, and the last 20 moves undo in one click — every tab back to its exact spot.</p>
-          </div>
+        <div class="ctas">
+          <a class="cta" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=hero">Add to Chrome, it's free</a>
+          <a class="ghost" href="#try">Try it in this page ↓</a>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Set up in under a minute.</h2>
-        <div class="grid steps">
-          <div class="card">
-            <h3>Pick a starter pack</h3>
-            <p>Code, Docs, Mail, AI, Watch, Social… or one click turns the sites you already have open into rules.</p>
-          </div>
-          <div class="card">
-            <h3>Press Alt+Shift+G</h3>
-            <p>Your whole window sorts itself. Don't like it? Undo puts everything back.</p>
-          </div>
-          <div class="card">
-            <h3>Forget about it</h3>
-            <p>With auto mode on, new tabs join their group as you browse. Ctrl/Cmd+T inside a group keeps you in it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="wrap narrow">
-        <h2>Free forever. Or $5 once.</h2>
-        <p class="lede">No subscription, no account, no ads. Other tab tools charge $4.50–$6.99 a month; GroupRules is $5 once. Each Chrome profile starts with 7 days of Pro.</p>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Free</th>
-              <th>Pro · <span class="price">$5</span> one-time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Group now (button + shortcut)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-            <tr><td>Rules (each can cover many sites)</td><td>3</td><td>Unlimited</td></tr>
-            <tr><td>Undo last 20 moves</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-            <tr><td>Suggestions from open tabs, starter packs</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-            <tr><td>Auto-group as you browse</td><td>—</td><td class="yes">✓</td></tr>
-            <tr><td>New tabs stay in their group</td><td>—</td><td class="yes">✓</td></tr>
-            <tr><td>Regex rules · import rules</td><td>—</td><td class="yes">✓</td></tr>
-          </tbody>
-        </table>
         <p class="cta-note">
-          One-time purchase: includes all 1.x updates, on all your own computers. If GroupRules is ever discontinued, Pro
-          keeps working. 30-day refund, no questions. When the trial ends nothing is deleted — extra rules just pause.
-          Checkout by Polar, our reseller and merchant of record.
+          Free forever with 3 rules · Pro is $5 once, not a subscription · Every install starts with a 7-day Pro trial.
+          No signup, no card.
         </p>
-      </div>
-    </section>
+        <ul class="promises">
+          <li>Never closes a tab</li>
+          <li>Never touches pinned tabs or groups you made</li>
+          <li>One-click undo</li>
+          <li>No account, no analytics</li>
+        </ul>
 
-    <section id="faq">
-      <div class="wrap narrow">
-        <h2>Questions</h2>
-        <details>
-          <summary>Why does Chrome say it can "read your browsing history"?</summary>
-          <p>
-            To put a tab in the right group, GroupRules has to see the tab's address. Chrome words that permission as
-            "read your browsing history". Addresses are matched on your computer and never sent anywhere.
-            GroupRules has no analytics and no servers.
+        <div class="demo-card" data-demo="hero">
+          <div class="demo-head">
+            <p class="demo-label" data-label>Before: a normal busy window</p>
+            <button class="btn" type="button" data-replay>↻ Replay</button>
+          </div>
+          <div class="strip" data-strip aria-label="Demo tab strip"></div>
+          <p class="demo-log" data-log aria-live="polite">Rules: Code · Docs · AI · Watch</p>
+          <p class="demo-foot">
+            This is live. It runs GroupRules' real grouping engine right here in the page. The pinned Inbox and the
+            “Trip” group you made yourself are left alone, on purpose.
           </p>
-        </details>
-        <details>
-          <summary>Does it close, suspend or reload tabs?</summary>
-          <p>No. It only groups and moves tabs. The build fails automatically if the code could close, discard or reload one.</p>
-        </details>
-        <details>
-          <summary>Will it mess with the groups I already have?</summary>
-          <p>
-            No. It only manages groups whose name matches one of your rules. Tabs in any other group stay put, and it
-            never recolours or reorders groups, and only renames a group when you rename the rule that owns it.
-          </p>
-        </details>
-        <details>
-          <summary>What happens when the 7-day trial ends?</summary>
-          <p>
-            Auto mode and "new tabs stay in their group" switch off, and rules after your first three pause. Nothing is
-            deleted — upgrade any time and they're back. Group now and Undo keep working forever.
-          </p>
-        </details>
-        <details>
-          <summary>Do my rules sync between computers?</summary>
-          <p>Yes, through your own Chrome sync (if you have it on). A Pro key works on all of your own computers.</p>
-        </details>
-        <details>
-          <summary>Does it work in Edge or Brave?</summary>
-          <p>
-            It's built and tested for Google Chrome. It only uses the standard tab-groups API that Edge and Brave also
-            support, so it should work there too — if anything misbehaves, email me and I'll fix it.
-          </p>
-        </details>
-        <details>
-          <summary>How do refunds work?</summary>
-          <p>Email ethanesame+grouprules@gmail.com within 30 days of buying and you get your money back. No questions, no forms.</p>
-        </details>
-        <details>
-          <summary>Who makes this?</summary>
-          <p>
-            One independent developer, Ethan Sam, who got tired of dragging tabs into groups. Bugs get fixed fast —
-            write to ethanesame+grouprules@gmail.com.
-          </p>
-        </details>
-      </div>
-    </section>
+          <noscript>
+            <div class="demo-static">
+              <img src="img/strip-before.webp" width="1240" height="40" alt="Real Chrome tab strip before: tabs in random order" />
+              <img src="img/strip-after.webp" width="1240" height="40" alt="The same tabs after GroupRules: Code, Mail and Docs groups" />
+            </div>
+          </noscript>
+        </div>
+      </header>
 
-    <section>
-      <div class="wrap narrow" style="text-align: center">
-        <h2>Stop dragging tabs.</h2>
-        <a class="cta" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj">Add to Chrome — it's free</a>
-      </div>
-    </section>
+      <section id="real">
+        <div class="wrap">
+          <p class="eyebrow">Not a mockup</p>
+          <h2>Real Chrome. Real tab groups.</h2>
+          <p class="lede">
+            GroupRules uses Chrome's own tab groups, so they work with everything Chrome already does: collapsing,
+            saving, syncing, dragging. These are screenshots from Chrome, not a drawing.
+          </p>
+          <div class="real">
+            <figure tabindex="0" aria-label="Before (scrolls sideways)">
+              <figcaption>Before</figcaption>
+              <img src="img/strip-before.webp" width="1240" height="40" loading="lazy" alt="Chrome tab strip with mixed tabs in random order" />
+            </figure>
+            <figure tabindex="0" aria-label="After (scrolls sideways)">
+              <figcaption>After: one click, or automatically as you browse</figcaption>
+              <img src="img/strip-after.webp" width="1240" height="40" loading="lazy" alt="Same Chrome tab strip sorted into Code, Mail and Docs tab groups" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="try" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Try it</p>
+          <h2>Try it with your own sites.</h2>
+          <p class="lede">
+            Switch on a pack, write a rule, open a tab. This runs the extension's real engine, so what happens here is
+            exactly what happens in Chrome.
+          </p>
+          <div class="pg" data-demo="playground">
+            <div class="pg-side">
+              <div class="pg-panel">
+                <h3>Starter packs</h3>
+                <div class="pchips" data-packs></div>
+              </div>
+              <div class="pg-panel">
+                <h3>Your rules <span class="muted small">(first match wins)</span></h3>
+                <div data-rules></div>
+              </div>
+              <div class="pg-panel">
+                <h3>Write your own</h3>
+                <form data-custom novalidate>
+                  <label class="sr-only" for="pg-sites">Sites, separated by commas</label>
+                  <input id="pg-sites" name="sites" type="text" placeholder="Sites: figma.com, canva.com" autocomplete="off" />
+                  <div class="row">
+                    <label class="sr-only" for="pg-title">Group name</label>
+                    <input id="pg-title" name="title" type="text" placeholder="Group name" maxlength="40" autocomplete="off" />
+                    <label class="sr-only" for="pg-color">Colour</label>
+                    <select id="pg-color" name="color"></select>
+                  </div>
+                  <button class="btn" type="submit">Add rule</button>
+                  <p class="pg-msg" data-custom-msg role="alert"></p>
+                </form>
+              </div>
+            </div>
+            <div class="pg-main">
+              <div class="pg-panel">
+                <div class="strip" data-strip aria-label="Your demo window's tabs"></div>
+                <div class="pg-bar">
+                  <button class="btn primary" type="button" data-group>Group tabs now</button>
+                  <button class="btn" type="button" data-undo>Undo</button>
+                  <label class="switch"><input type="checkbox" data-auto checked /> Auto-group as I browse</label>
+                  <span class="spacer"></span>
+                  <button class="btn" type="button" data-reset>Reset</button>
+                </div>
+                <p class="demo-log" data-log aria-live="polite"></p>
+              </div>
+              <div class="pg-panel">
+                <h3>Open a tab</h3>
+                <form class="row" data-open>
+                  <label class="sr-only" for="pg-url">Web address</label>
+                  <input id="pg-url" type="text" data-url placeholder="Any address, e.g. gist.github.com" autocomplete="off" inputmode="url" spellcheck="false" />
+                  <button class="btn" type="submit">Open</button>
+                </form>
+                <p class="tester" data-tester aria-live="polite"></p>
+                <div class="qchips" data-quick aria-label="Open a sample tab"></div>
+              </div>
+              <p class="muted small">
+                Try closing tabs (×), pressing Undo, or switching auto mode off. In the extension, Free runs your first 3
+                rules and “Group tabs now”; auto mode and unlimited rules are Pro (included in the 7-day trial).
+              </p>
+              <noscript><p class="pg-noscript">The live demo needs JavaScript. Everything else on this page works without it.</p></noscript>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="wrap">
+          <p class="eyebrow">Why rules</p>
+          <h2>Rules, not guesses.</h2>
+          <p class="lede">
+            AI tab organizers guess from page titles. GroupRules does exactly what you told it, every time.
+          </p>
+          <div class="grid three">
+            <div class="card">
+              <span class="icon" aria-hidden="true">🎯</span>
+              <h3>Same site, same group. Every time.</h3>
+              <p>A rule does what it says. No groups that change names between runs, no tabs filed under the wrong topic.</p>
+            </div>
+            <div class="card">
+              <span class="icon" aria-hidden="true">🔒</span>
+              <h3>Nothing leaves your browser</h3>
+              <p>Matching happens on your computer. No account, no analytics, and no cloud model reading your tabs.</p>
+            </div>
+            <div class="card">
+              <span class="icon" aria-hidden="true">⚡</span>
+              <h3>Instant</h3>
+              <p>200 tabs checked against 40 rules in under 50&nbsp;ms. That's a test that runs on every build. No waiting on a model.</p>
+            </div>
+          </div>
+          <p class="callout">
+            <strong>What about Chrome's own “Organize similar tabs”?</strong> It suggests groups when you ask it to, which is
+            great for a one-off tidy. GroupRules is for every day: your sites always land in the same groups,
+            automatically, as you browse, and you never have to sign in to anything.
+          </p>
+        </div>
+      </section>
+
+      <section id="fixed" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Fixed on purpose</p>
+          <h2>Built from other auto-groupers' 1-star reviews.</h2>
+          <p class="lede">
+            Before writing any code, we read the low-star reviews of existing tab-grouping extensions (paraphrased below).
+            Each complaint became a behaviour GroupRules is tested against on every build.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <p class="complaint">“It makes a second group for the same site.”</p>
+              <h3>One rule, one group per window</h3>
+              <p>New tabs join the existing group, even a collapsed one. Never a second “Code”.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“It grabbed my pinned tabs.”</p>
+              <h3>Pinned tabs are never touched</h3>
+              <p>They're not moved, not grouped and not counted.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“It renamed and reordered my groups.”</p>
+              <h3>Your groups are yours</h3>
+              <p>A tab in a group you made is never moved out of it. Groups are only renamed when you rename the rule that owns them.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“The minimum-tabs setting doesn't work.”</p>
+              <h3>Thresholds that actually work</h3>
+              <p>No group for a lone tab (a new group starts at 2 by default, set per rule). Pull a tab out of a group and it stays out until you go to another site.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“A rule grabs subdomains it shouldn't.”</p>
+              <h3>Exact, or with subdomains</h3>
+              <p>Your choice, per rule. And a tester shows which group any address would go to before it happens.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“It mixed tabs from my other window.”</p>
+              <h3>Each window stays separate</h3>
+              <p>Tabs never jump between windows. Installed web apps and pop-ups are left alone.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“Seconds of lag on every new tab.”</p>
+              <h3>Fast by design</h3>
+              <p>200 tabs × 40 rules in under 50&nbsp;ms, tested on every build. Bursts of new tabs are batched.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“Broke after an update and opened a tab about it.”</p>
+              <h3>Boring, stable technology</h3>
+              <p>Only Chrome's standard tab-groups API, with no scripts injected into websites. Updates never open a tab.</p>
+            </div>
+            <div class="card">
+              <p class="complaint">“It lost all my tabs.” (tab managers)</p>
+              <h3>Undo anything</h3>
+              <p>It can't close tabs at all, and one click undoes the last 20 moves, every tab back in its exact spot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="look">
+        <div class="wrap">
+          <p class="eyebrow">Inside the extension</p>
+          <h2>Set up in under a minute.</h2>
+          <div class="grid three steps">
+            <div class="card">
+              <h3>Pick a starter pack</h3>
+              <p>Code, Docs, Mail, AI, Watch, Social, Shopping, Design. Or one click turns the sites you already have open into rules.</p>
+            </div>
+            <div class="card">
+              <h3>Press Alt+Shift+G</h3>
+              <p>Your whole window sorts itself. Don't like it? Undo puts everything back.</p>
+            </div>
+            <div class="card">
+              <h3>Forget about it</h3>
+              <p>With auto mode on, new tabs join their group as you browse. Ctrl/Cmd+T inside a group keeps you in it.</p>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot">
+              <img src="img/rules.webp" width="780" height="625" loading="lazy" alt="GroupRules rules page: Code, Docs, Mail, Watch and Tickets rules, each with sites, an on/off switch, edit and delete; an address tester below" />
+              <figcaption>The rules page: plain-English rules, drag to reorder, and an address tester.</figcaption>
+            </figure>
+            <figure class="shot popup">
+              <img src="img/popup.webp" width="340" height="520" loading="lazy" alt="GroupRules toolbar popup with a Group tabs now button, an Undo entry, and auto mode switches" />
+              <figcaption>The toolbar popup: Group now, Undo, and “Why did my tabs move?”.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="alt">
+        <div class="wrap">
+          <p class="eyebrow">Permissions, plainly</p>
+          <h2>What Chrome will ask, and what it means.</h2>
+          <div class="perm">
+            <div class="chrome-dialog" role="img" aria-label="Chrome's install prompt: Add GroupRules? It can read your browsing history">
+              <b>Add “GroupRules”?</b>
+              It can:
+              <ul>
+                <li>Read your browsing history</li>
+              </ul>
+              <div class="fake-btns" aria-hidden="true"><span>Cancel</span><span>Add extension</span></div>
+            </div>
+            <ul class="ticks">
+              <li>That's Chrome's wording for “can see each tab's address”, which a rule needs to match it.</li>
+              <li>Addresses are matched on your computer. They're never stored, logged or sent anywhere.</li>
+              <li>GroupRules can't read what's on a page: not your email, your passwords or your forms. The permission also covers tab titles, which GroupRules doesn't use.</li>
+              <li>Its only network request checks a Pro license key with Polar, and only after you choose to activate one. Chrome asks you first.</li>
+              <li>No account, no analytics, no ads. <a href="privacy.html">Read the privacy policy</a>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="wrap narrow">
+          <p class="eyebrow">Pricing</p>
+          <h2>Free forever. Or $5 once.</h2>
+          <p class="lede">No subscription, no account, no ads. Other tab tools charge $4.50–$6.99 a month.</p>
+          <div class="plans">
+            <div class="plan">
+              <h3>Free</h3>
+              <div class="amount">$0 <small>forever</small></div>
+              <ul class="ticks">
+                <li>Group now: button and Alt+Shift+G</li>
+                <li>3 rules, each covering many sites</li>
+                <li>Undo the last 20 moves</li>
+                <li>Starter packs and suggestions</li>
+                <li class="no">Auto-group as you browse</li>
+                <li class="no">New tabs stay in their group</li>
+                <li class="no">Regex rules and rule import</li>
+              </ul>
+              <a class="ghost" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=pricing_free">Add to Chrome</a>
+            </div>
+            <div class="plan pro">
+              <span class="tag">7-day trial included</span>
+              <h3>Pro</h3>
+              <div class="amount">$5 <small>once</small></div>
+              <ul class="ticks">
+                <li>Everything in Free</li>
+                <li>Auto-group as you browse</li>
+                <li>New tabs stay in their group</li>
+                <li>Unlimited rules</li>
+                <li>Regex rules and rule import</li>
+                <li>All 1.x updates, on all your own computers</li>
+              </ul>
+              <a class="cta" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=pricing_pro">Start the free trial</a>
+            </div>
+          </div>
+          <p class="fine">
+            The trial starts on install: no signup, no card. When it ends nothing is deleted; extra rules just pause until
+            you upgrade. One-time purchase with a 30-day refund, no questions. If GroupRules is ever discontinued, Pro keeps
+            working. Checkout is by Polar, our reseller and merchant of record, which handles tax and receipts.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="alt">
+        <div class="wrap narrow">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions</h2>
+          <details>
+            <summary>What exactly is a rule?</summary>
+            <p>
+              A group name, a colour, and the sites that belong in it, like “github.com, gitlab.com → Code (blue)”. Match by
+              website (with or without subdomains), by how an address starts (<code>github.com/acme/</code>), or, in Pro,
+              by a regular expression. The first matching rule wins; drag rules to reorder them.
+            </p>
+          </details>
+          <details>
+            <summary>Why does Chrome say it can “read your browsing history”?</summary>
+            <p>
+              To put a tab in the right group, GroupRules has to see the tab's address, and Chrome words that permission as
+              “read your browsing history”. Addresses are matched on your computer and never stored or sent anywhere.
+              GroupRules has no analytics and no servers.
+            </p>
+          </details>
+          <details>
+            <summary>Does it close, suspend or reload tabs?</summary>
+            <p>No. It only groups and moves tabs. The build fails automatically if the code could close, discard or reload one.</p>
+          </details>
+          <details>
+            <summary>Will it mess with the groups I already have?</summary>
+            <p>
+              No. It only manages groups whose name matches one of your rules. Tabs in any other group stay put. It never
+              recolours or reorders groups, and only renames a group when you rename the rule that owns it.
+            </p>
+          </details>
+          <details>
+            <summary>How is this different from Chrome's own “Organize similar tabs”?</summary>
+            <p>
+              Chrome's Tab organizer suggests groups when you ask it to. It's a one-off tidy that needs you signed in to
+              Chrome, and it isn't available in every country or on every account. GroupRules follows rules you choose, keeps
+              sorting new tabs as you browse, gives the same result every time, and needs no sign-in. The two work fine
+              together.
+            </p>
+          </details>
+          <details>
+            <summary>What happens when the 7-day trial ends?</summary>
+            <p>
+              Auto mode and “new tabs stay in their group” switch off, and rules after your first three pause. Nothing is
+              deleted: upgrade any time and they're back. Group now and Undo keep working forever.
+            </p>
+          </details>
+          <details>
+            <summary>Does it work with several windows?</summary>
+            <p>Yes. Each window is sorted on its own, gets its own groups, and a tab never jumps to another window.</p>
+          </details>
+          <details>
+            <summary>Can I change the keyboard shortcuts?</summary>
+            <p>
+              Yes. <kbd>Alt+Shift+G</kbd> groups the window and <kbd>Alt+Shift+Z</kbd> undoes. Change either one at
+              <code>chrome://extensions/shortcuts</code>.
+            </p>
+          </details>
+          <details>
+            <summary>Do my rules sync between computers?</summary>
+            <p>Yes, through your own Chrome sync if you have it on. A Pro key works on all of your own computers.</p>
+          </details>
+          <details>
+            <summary>Does it work in Edge or Brave?</summary>
+            <p>
+              It's built and tested for Google Chrome. It only uses the standard tab-groups API that Edge and Brave also
+              support, so it should work there too. If anything misbehaves, email me and I'll fix it.
+            </p>
+          </details>
+          <details>
+            <summary>How do refunds work?</summary>
+            <p>Email <a href="mailto:ethanesame+grouprules@gmail.com?subject=GroupRules%20refund">ethanesame+grouprules@gmail.com</a> within 30 days of buying and you get your money back. No questions, no forms.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="wrap narrow">
+          <h2>Stop dragging tabs.</h2>
+          <p class="lede" style="margin: 0 auto">Set it up once. Your tabs sort themselves from then on.</p>
+          <div class="ctas">
+            <a class="cta" href="https://chromewebstore.google.com/detail/lfpioijnnoekjfjghhnimpeapecoflfj?utm_source=site&amp;utm_medium=footer">Add to Chrome, it's free</a>
+          </div>
+          <p class="maker">
+            GroupRules is made by one independent developer, Ethan Sam, in New York. Found a bug or want a feature?
+            Write to <a href="mailto:ethanesame+grouprules@gmail.com">ethanesame+grouprules@gmail.com</a>. I read every message.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="wrap">
-        <div>
-          © 2026 Ethan Sam · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of sale</a> ·
+        <div class="cols">
+          <a href="guide.html">How to auto-group tabs in Chrome</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms of sale</a>
           <a href="mailto:ethanesame+grouprules@gmail.com">Contact</a>
         </div>
-        <div style="margin-top: 8px">
-          Chrome is a trademark of Google LLC. GroupRules is an independent product, not made or endorsed by Google. This
-          site uses no cookies, analytics or third-party scripts.
+        <div>© 2026 Ethan Sam. This site has no cookies, analytics or third-party scripts.</div>
+        <div style="margin-top: 6px">
+          Chrome is a trademark of Google LLC. GroupRules is an independent product, not made or endorsed by Google.
         </div>
       </div>
     </footer>
