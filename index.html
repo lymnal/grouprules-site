@@ -71,6 +71,7 @@
           { "@type": "Question", "name": "Does GroupRules close, suspend or reload tabs?", "acceptedAnswer": { "@type": "Answer", "text": "No. It only groups and moves tabs. The build fails automatically if the code could close, discard or reload a tab." } },
           { "@type": "Question", "name": "How is GroupRules different from Chrome's own Organize similar tabs?", "acceptedAnswer": { "@type": "Answer", "text": "Chrome's Tab organizer suggests groups when you ask it to. It is a one-off tidy that needs you signed in to Chrome and is not available in every country or on every account. GroupRules follows rules you choose, keeps sorting new tabs as you browse, gives the same result every time and needs no sign-in." } },
           { "@type": "Question", "name": "Is GroupRules a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is free forever with 3 rules. Pro is a one-time $5 purchase with a 30-day no-questions refund, and every install starts with a 7-day Pro trial with no signup and no card." } },
+          { "@type": "Question", "name": "Will a Chrome update break GroupRules?", "acceptedAnswer": { "@type": "Answer", "text": "GroupRules is built for Chrome's current extension platform (Manifest V3), uses only Chrome's standard tabs, tab-groups and storage features, and never injects code into websites, which is the part that usually breaks. If an update ever breaks something, Undo still works and a fix ships." } },
           { "@type": "Question", "name": "Does GroupRules work in Edge or Brave?", "acceptedAnswer": { "@type": "Answer", "text": "It is built and tested for Google Chrome. It only uses the standard tab-groups API that Edge and Brave also support, so it should work there too." } }
         ]
       }
@@ -471,6 +472,15 @@
           <details>
             <summary>Do my rules sync between computers?</summary>
             <p>Yes, through your own Chrome sync if you have it on. A Pro key works on all of your own computers.</p>
+          </details>
+          <details>
+            <summary>Will a Chrome update break it?</summary>
+            <p>
+              Nobody can promise Chrome never changes, but GroupRules is built to be about as sturdy as an extension can
+              be. It's made for Chrome's current extension platform (Manifest V3), uses only Chrome's standard tabs,
+              tab-groups and storage features, and never injects code into websites, which is the part that usually
+              breaks. If a Chrome update ever does break something, Undo still works and I'll ship a fix.
+            </p>
           </details>
           <details>
             <summary>Does it work in Edge or Brave?</summary>
